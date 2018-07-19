@@ -1,0 +1,28 @@
+html, body, div, span, 
+h1, h2, h3, h4, p, a, img, 
+ol, ul, li, form, table {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+}
+
+body {
+    color: #333;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-family: "Microsoft YaHei",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei UI";
+}
+
+div {
+    display: block;
+}
+
+ul {
+    list-style-type: none;
+}
+
+table {
+    border-spacing: 0px;
+}

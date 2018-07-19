@@ -1,0 +1,18 @@
+.fl {
+    float: left;
+}
+
+.horizontal-ul li {
+    float: left;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.debug1 {
+    background-color: #00ff00;
+}
