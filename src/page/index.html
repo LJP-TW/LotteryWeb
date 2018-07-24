@@ -37,131 +37,211 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div id="menu" class="mode grey fl" style="padding-left: 30px; width: 61%; margin-right: -1px; border-right: 1px solid #ccc;">
-                                <div class="clearfix center">
-                                    <div class="fl">
-                                        <h4 class="option">直　選</h4>
+                            <div class="content">
+                                <div id="menu" class="mode grey fl" style="width: 61%; margin-right: -1px; border-right: 1px solid #ccc;">
+                                    <div class="clearfix center">
+                                        <div class="fl">
+                                            <h4 class="option">直　選</h4>
+                                        </div>
+                                        <div class="fl">
+                                            <ul class="broadwise-tabs">
+                                                <li>
+                                                    <button class="option panelBtn" v-bind:class="{active: activeBtn === 'btn00'}" v-on:click="click(0, 0);">直選複式</button>
+                                                </li>
+                                                <li>
+                                                    <button class="option panelBtn" v-bind:class="{active: activeBtn === 'btn01'}" v-on:click="click(0, 1);">直選單式</button>
+                                                </li>
+                                                <li>
+                                                    <button class="option panelBtn" v-bind:class="{active: activeBtn === 'btn02'}" v-on:click="click(0, 2);">五星組合</button>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="fl">
-                                        <ul class="broadwise-tabs">
-                                            <li>
-                                                <button class="option panelBtn" v-on:click="click(0, 0)">直選複式</button>
-                                            </li>
-                                            <li>
-                                                <button class="option panelBtn" v-on:click="click(0, 1)">直選單式</button>
-                                            </li>
-                                            <li>
-                                                <button class="option panelBtn" v-on:click="click(0, 2)">五星組合</button>
-                                            </li>
-                                        </ul>
+                                    <div class="clearfix center">
+                                        <div class="fl">
+                                            <h4 class="option">組　選</h4>
+                                        </div>
+                                        <div class="fl">
+                                            <ul class="broadwise-tabs">
+                                                <li>
+                                                    <button class="option panelBtn">組選120</button>
+                                                </li>
+                                                <li>
+                                                    <button class="option panelBtn">組選60</button>
+                                                </li>
+                                                <li>
+                                                    <button class="option panelBtn">組選30</button>
+                                                </li>
+                                                <li>
+                                                    <button class="option panelBtn">組選20</button>
+                                                </li>
+                                                <li>
+                                                    <button class="option panelBtn">組選10</button>
+                                                </li>
+                                                <li>
+                                                    <button class="option panelBtn">組選5</button>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="clearfix center">
-                                    <div class="fl">
-                                        <h4 class="option">組　選</h4>
+                                    <div class="clearfix center">
+                                        <div class="fl">
+                                            <h4 class="option">特　殊</h4>
+                                        </div>
+                                        <div class="fl">
+                                            <ul class="broadwise-tabs">
+                                                <li>
+                                                    <button class="option panelBtn">一帆風順</button>
+                                                </li>
+                                                <li>
+                                                    <button class="option panelBtn">好事成雙</button>
+                                                </li>
+                                                <li>
+                                                    <button class="option panelBtn">三星報喜</button>
+                                                </li>
+                                                <li>
+                                                    <button class="option panelBtn">四季發財</button>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="fl">
-                                        <ul class="broadwise-tabs">
-                                            <li>
-                                                <button class="option panelBtn">組選120</button>
-                                            </li>
-                                            <li>
-                                                <button class="option panelBtn">組選60</button>
-                                            </li>
-                                            <li>
-                                                <button class="option panelBtn">組選30</button>
-                                            </li>
-                                            <li>
-                                                <button class="option panelBtn">組選20</button>
-                                            </li>
-                                            <li>
-                                                <button class="option panelBtn">組選10</button>
-                                            </li>
-                                            <li>
-                                                <button class="option panelBtn">組選5</button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="clearfix center">
-                                    <div class="fl">
-                                        <h4 class="option">特　殊</h4>
-                                    </div>
-                                    <div class="fl">
-                                        <ul class="broadwise-tabs">
-                                            <li>
-                                                <button class="option panelBtn">一帆風順</button>
-                                            </li>
-                                            <li>
-                                                <button class="option panelBtn">好事成雙</button>
-                                            </li>
-                                            <li>
-                                                <button class="option panelBtn">三星報喜</button>
-                                            </li>
-                                            <li>
-                                                <button class="option panelBtn">四季發財</button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="clearfix center">
-                                    <div class="fl">
-                                        <h4 class="option">其　它</h4>
-                                    </div>
-                                    <div class="fl">
-                                        <ul class="broadwise-tabs">
-                                            <li>
-                                                <button class="option panelBtn">總和大小單雙</button>
-                                            </li>
-                                            <li>
-                                                <button class="option panelBtn">總和組合大小單雙</button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="info" class="mode fl" style="width: 39%; border-left: 1px solid #ccc; padding: 10px 25px;">
-                                <p>你已選取 <span>{{ mode }}</span></p>
-                                <p>{{ content  }}</p>
-                                <div class="clearfix">
-                                    <div class="fl">
-                                        問號
-                                    </div>
-                                    <div class="fl">
-                                        示例
-                                    </div>
-                                    <div class="fl">
-                                        獎金模式
-                                        <select>
-                                            <option value="0">
-                                                ¥197000-0%
-                                            </option>
-                                            <option value="1">
-                                                ¥180000-8.5%
-                                            </option>
-                                        </select>
+                                    <div class="clearfix center">
+                                        <div class="fl">
+                                            <h4 class="option">其　它</h4>
+                                        </div>
+                                        <div class="fl">
+                                            <ul class="broadwise-tabs">
+                                                <li>
+                                                    <button class="option panelBtn">總和大小單雙</button>
+                                                </li>
+                                                <li>
+                                                    <button class="option panelBtn">總和組合大小單雙</button>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="row-block bet-form">
-                                <table>
-                                    <!-- 單式 textarea --> 
-                                    <!-- 萬位選號 --> 
-                                    <tr>
-                                        <td>
-                                        </td>
-                                    </tr>
-                                    <!-- 千位選號 --> 
-                                    <!-- 百位選號 --> 
-                                    <!-- 十位選號 --> 
-                                    <!-- 個位選號 --> 
-                                </table>
-                            </div>
-                            <div class="row-block bet-option">
-                            </div>
-                            <div class="row-block bet-verify">
-                            </div>
-                            <div class="row-block bet-history">
+                                <div id="info" class="mode fl" style="width: 39%; border-left: 1px solid #ccc; padding: 10px 25px;">
+                                    <p>你已選取 <span>{{ modeText }}</span></p>
+                                    <p>{{ content  }}</p>
+                                    <div class="clearfix">
+                                        <div class="fl">
+                                            問號
+                                        </div>
+                                        <div class="fl">
+                                            示例
+                                        </div>
+                                        <div class="fl">
+                                            獎金模式
+                                            <select>
+                                                <option value="0">
+                                                    ¥197000-0%
+                                                </option>
+                                                <option value="1">
+                                                    ¥180000-8.5%
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="betForm" class="row-block pickZone">
+                                    <table class="pickTable">
+                                        <!-- 單式 textarea --> 
+                                        <tr v-if="mode == 't'">
+                                            <td>
+                                                <div>
+                                                    textarea
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!-- 萬位選號 --> 
+                                       <tr v-if="mode == 'n'">
+                                            <td>
+                                                <div class="vcenter">
+                                                    <p>萬　位</p>
+                                                </div>
+                                                <ul class="pickBox vcenter clearfix">
+                                                    <li v-for="n in 10">
+                                                        <a class="pickBtn" :class="pickBtnClass('n10000', n - 1)" @click="pickBtnClick('n10000', n - 1)">{{ n - 1 }}</a>
+                                                    </li>
+                                                </ul>
+                                                <button v-for="n in 6" 
+                                                        class="pickBtn2"
+                                                        @click="pickBtn2Click('n10000', n - 1)">{{ pickBtn2_Words[n - 1] }}</button>
+                                            </td>
+                                        </tr>
+                                        <!-- 千位選號 --> 
+                                        <tr v-if="mode === 'n'">
+                                            <td>
+                                                <div class="vcenter">
+                                                    <p>千　位</p>
+                                                </div>
+                                                <ul class="pickBox vcenter clearfix">
+                                                    <li v-for="n in 10">
+                                                        <a class="pickBtn" :class="pickBtnClass('n1000', n - 1)" @click="pickBtnClick('n1000', n - 1)">{{ n - 1 }}</a>
+                                                    </li>
+                                                </ul>
+                                                <button v-for="n in 6" 
+                                                        class="pickBtn2"
+                                                        @click="pickBtn2Click('n1000', n - 1)">{{ pickBtn2_Words[n - 1] }}</button>
+                                            </td>
+                                        </tr>
+                                        <!-- 百位選號 --> 
+                                        <tr v-if="mode === 'n'">
+                                            <td>
+                                                <div class="vcenter">
+                                                    <p>百　位</p>
+                                                </div>
+                                                <ul class="pickBox vcenter clearfix">
+                                                    <li v-for="n in 10">
+                                                        <a class="pickBtn" :class="pickBtnClass('n100', n - 1)" @click="pickBtnClick('n100', n - 1)">{{ n - 1 }}</a>
+                                                    </li>
+                                                </ul>
+                                                <button v-for="n in 6" 
+                                                        class="pickBtn2"
+                                                        @click="pickBtn2Click('n100', n - 1)">{{ pickBtn2_Words[n - 1] }}</button>
+                                            </td>
+                                        </tr>
+                                        <!-- 十位選號 --> 
+                                        <tr v-if="mode === 'n'">
+                                            <td>
+                                                <div class="vcenter">
+                                                    <p>十　位</p>
+                                                </div>
+                                                <ul class="pickBox vcenter clearfix">
+                                                    <li v-for="n in 10">
+                                                        <a class="pickBtn" :class="pickBtnClass('n10', n - 1)" @click="pickBtnClick('n10', n - 1)">{{ n - 1 }}</a>
+                                                    </li>
+                                                </ul>
+                                                <button v-for="n in 6" 
+                                                        class="pickBtn2"
+                                                        @click="pickBtn2Click('n10', n - 1)">{{ pickBtn2_Words[n - 1] }}</button>
+                                            </td>
+                                        </tr>
+                                        <!-- 個位選號 --> 
+                                        <tr v-if="mode === 'n'">
+                                            <td>
+                                                <div class="vcenter">
+                                                    <p>個　位</p>
+                                                </div>
+                                                <ul class="pickBox vcenter clearfix">
+                                                    <li v-for="n in 10">
+                                                        <a class="pickBtn" :class="pickBtnClass('n1', n - 1)" @click="pickBtnClick('n1', n - 1)">{{ n - 1 }}</a>
+                                                    </li>
+                                                </ul>
+                                                <button v-for="n in 6" 
+                                                        class="pickBtn2"
+                                                        @click="pickBtn2Click('n1', n - 1)">{{ pickBtn2_Words[n - 1] }}</button>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <div class="row-block bet-option">
+                                </div>
+                                <div class="row-block bet-verify">
+                                </div>
+                                <div class="row-block bet-history">
+                                </div>
                             </div>
                         </td>
                     </tr>

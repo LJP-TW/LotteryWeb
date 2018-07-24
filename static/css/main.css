@@ -48,6 +48,10 @@
     background-color: #f3f3f3;
 }
 
+.content {
+    padding: 0 2em;
+}
+
 .broadwise-tabs li {
     float: left;
     display: block;
@@ -121,17 +125,109 @@ button.option {
     min-width: 75px;
 }
 
-.height-inherit {
-    height: inherit;
-    line-height: inherit;
+.panelBtn:hover,
+.panelBtn:focus,
+.panelBtn:active,
+.panelBtn.active {
+    border: 1px solid #c2b069;
+    color: #26200f;
+    background-color: #c2b069;
+}
+
+.pickZone {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.pickTable {
+    width: 100%;
+}
+
+.pickTable tr {
+    display: table-row;
+    box-sizing: border-box;
+    border-bottom: 1px solid #0000ff;
+}
+
+.pickTable tr td {
+    padding: .2em 0;
+    border-bottom: 1px solid #e9e1c2;
+}
+
+.pickBox {
+    padding: 0 1.5em;
+}
+
+.pickBox li {
+    display: inline-block;
+    margin-right: 1em;
+    text-align: center;
+    width: 42px;
+    height: 42px;
+    vertical-align: middle;
+}
+
+.pickBtn {
+    display: inline-block;
+    background-color: #8a7b40;
+    border-radius: 99em;
+    font-weight: bold;
+    text-align: center;
+    border: 0;
+    font-size: 30px;
+    padding: 0;
+    width: 33px;
+    height: 33px;
+    line-height: 33px;
+    margin: 5px .05em;
+    letter-spacing: normal;
+    transition: 0.3s;
+}
+
+.pickBtn:hover,
+.pickBtn:focus,
+.pickBtn:active,
+.pickBtn.active {
+    background-color: #c2b069;
+    color: #fff;
+    outline: none;
+    width: 33px;
+    height: 33px;
+    border: 3px solid #fff;
+    box-shadow: 0 3px 3px 0 rgba(8, 1, 3, .35);
+    margin-top: 1px;
+}
+
+.pickBtn2 {
+    border: 1px solid #c2b069;
+    transition: .3s;
+    -webkit-border-radius: .4em;
+    font-size: 15px;
+    line-height: .4em;
+    color: #8a7b40;
+    padding: 0;
+    margin: 8px 5px;
+    text-align: center;
+    vertical-align: middle;
+    background-color: transparent;
+    font-weight: 700;
+    width: 26px;
+    height: 26px;
+}
+
+.pickBtn2:hover {
+    color: #fff;
+    background-color: #c2b069;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
 }
 
 .fl {
     float: left;
-}
-
-.lh1 {
-    line-height: 24px;
 }
 
 .center {
@@ -139,7 +235,7 @@ button.option {
 }
 
 .mode {
-    padding: .7em 2em;
+    padding: .7em 0;
     box-sizing: border-box;
     background-color: #f3f3f3;
 }

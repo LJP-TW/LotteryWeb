@@ -25,4 +25,15 @@ ul {
 
 table {
     border-spacing: 0px;
+    border-collapse: collapse;
+}
+
+tr {
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+
+button:focus {
+    outline: 0;
 }
