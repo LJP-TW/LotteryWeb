@@ -54,6 +54,23 @@ const server = http.createServer((req, res) => {
             }
         });
     }
+    else if (method === 'GET' && url.slice(-4) === '.png')
+    {
+        console.log('Request: ../static/img' + url);
+        fs.readFile('../static/img' + url, (err, html) => {
+            if (err) {
+                res.statusCode = 404;
+                res.write('Non Found');
+                res.end();
+            }
+            else {
+                res.statusCode = 200;
+                res.setHeader('Content-Type', 'text/html');
+                res.write(html);
+                res.end();
+            }
+        });
+    }
     else if (method === 'GET')
     {
         fs.readFile('../src/page' + url, (err, html) => {
