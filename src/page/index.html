@@ -6,6 +6,7 @@
         <link href="main.css" rel="stylesheet" type="text/css">
         <link href="bet-form.css" rel="stylesheet" type="text/css">
         <link href="bet-verify.css" rel="stylesheet" type="text/css">
+        <link href="bet-history.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <div class="header">
@@ -23,16 +24,19 @@
                     </tr>
                     <tr>
                         <td>
-                            <div class="gameMode">
-                                <ul class="component-block broadwise-tabs">
+                            <div class="gameMode tabs-bg1">
+                                <ul class="component-block broadwise-tabs style1">
                                     <li>
-                                        <a class="right-line">五星</a>
+                                        <a>五星</a>
+                                        |
                                     </li>
                                     <li>
-                                        <a class="right-line">四星</a>
+                                        <a>四星</a>
+                                        |
                                     </li>
                                     <li>
-                                        <a class="right-line">前三</a>
+                                        <a>前三</a>
+                                        |
                                     </li>
                                     <li>
                                         <a>...</a>
@@ -296,10 +300,7 @@
                                             <span class="lig_green fl">
                                                 投注項：0筆。
                                             </span>
-                                            <span class="fr">
-                                                <img width="18px" height="18px" src="garbage.png">
-                                                </img>
-                                            </span>
+                                            <i class="fr"></i>
                                         </div>
                                         <div class="bet-table">
                                             <table>
@@ -325,6 +326,33 @@
                                     </div>
                                 </div>
                                 <div class="row-block bet-history">
+                                    <div class="row-block tabs-bg1">
+                                        <ul class="broadwise-tabs style2">
+                                            <li>我的投注</li>
+                                            <li>我的追注</li>
+                                            <li>合買跟單</li>
+                                        </ul>
+                                    </div>
+                                    <!--我的投注-->
+                                    <div>
+                                        <table>
+                                            <thead>
+                                                <tr>
+                                                    <th>彩種</th>
+                                                    <th>玩法</th>
+                                                    <th>獎期</th>
+                                                    <th>投注號碼</th>
+                                                    <th>開獎號</th>
+                                                    <th>金額</th>
+                                                    <th>獎金</th>
+                                                    <th>狀態</th>
+                                                    <th>操作</th>
+                                                </tr>
+                                            </thead>
+                                        </table>
+                                    </div>
+                                    <!--我的追注-->
+                                    <!--合買跟單-->
                                 </div>
                             </div>
                         </td>

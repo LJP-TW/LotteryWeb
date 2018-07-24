@@ -36,7 +36,7 @@
 }
 
 .gameMode {
-    background-color: #26200f;
+    color: #c2b069;
 }
 
 .main-page {
@@ -55,20 +55,45 @@
 .broadwise-tabs li {
     float: left;
     display: block;
+    cursor: pointer;
 }
 
-.broadwise-tabs li a {
+.broadwise-tabs.style1 li a {
+    color: #c2b069;
+    display: inline-block;
     width: 61px;
     height: 47px;
-    text-align: center;
     line-height: 60px;
-    display: inline-block;
-    color: #c2b069;
+    text-align: center;
+    border-radius: 4px 4px 0 0;
 }
 
-.right-line {
-    margin-right: -1px;
-    border-right: 1px solid #ccc;
+.broadwise-tabs.style1 li a:hover,
+.broadwise-tabs.style1 li a:active,
+.broadwise-tabs.style1 li a.hover {
+    color: #26200f;
+    background: url(navbg.png);
+}
+
+.broadwise-tabs.style2 li {
+    color: #c2b069;
+    display: inline-block;
+    border: none;
+    width: 90px;
+    height: 40px;
+    line-height: 43px;
+    text-align: center;
+    padding: 0;
+    font-size: 14px;
+    letter-spacing: 1px;
+    border-radius: 4px 4px 0 0;
+}
+
+.broadwise-tabs.style2 li:hover,
+.broadwise-tabs.style2 li:active,
+.broadwise-tabs.style2 li.active {
+    color: #26200f;
+    background: url(hisnavbg.png);
 }
 
 .block-container {
@@ -200,6 +225,7 @@ button.option {
     margin: 5px .05em;
     letter-spacing: normal;
     transition: 0.3s;
+    cursor: pointer;
 }
 
 .pickBtn:hover,
@@ -231,6 +257,7 @@ button.option {
     font-weight: 700;
     width: 26px;
     height: 26px;
+    cursor: pointer;
 }
 
 .pickBtn2:hover {
@@ -288,6 +315,14 @@ button.option {
 .bigBtn.red {
     color: #fff;
     background: #bd2c00;
+}
+
+.tabs-bg1 {
+    background: url(betnav.png) 0 5px no-repeat;
+}
+
+.tabs-bg2 {
+    background: url(history.png) 0 5px no-repeat;
 }
 
 .debug1 {

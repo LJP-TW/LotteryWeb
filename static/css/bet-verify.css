@@ -11,6 +11,14 @@
     padding: .7em .7em;
 }
 
+.bet-verify-left i {
+    background: url(garbage.png) 0 0 no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+}
+
 .bet-verify-right {
     box-sizing: border-box;
     padding: 9px 17px;
