@@ -1,0 +1,69 @@
+.bet-form {
+    width: 100%;
+    margin: 10px 0;
+    color: #878787;
+    letter-spacing: 2px;
+}
+
+.bet-form .p {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.select {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.select-counter-action {
+    display: inline-block;
+    width: 26px;
+    line-height: 26px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: arial;
+    color: #26200f;
+    background: #c2b069;
+    border-radius: 3px;
+}
+
+.choose-model {
+    display: inline-block;
+    position: relative;
+    padding: 3px;
+    border: 1px solid #e9e1c2;
+    vertical-align: middle;
+    background-color: transparent;
+}
+
+.choose-model .choose-input {
+    display: block;
+    width: 54px;
+    border: none;
+    background: none;
+    outline: none;
+    text-align: center;
+    color: #878787;
+    font-size: 16px;
+}
+
+.unit ul li {
+    display: inline-block;
+    background: #c2b069;
+    color: #333;
+    font-size: 13px;
+    padding: 2px 3px;
+    margin: 1px -1px;
+    border-radius: 3px;
+    border: 1px solid #c2b069;
+    cursor: pointer;
+}
+
+.unit ul li:hover,
+.unit ul li.active {
+    background: #8a7b40;
+    color: #f3f3f3;
+    border: 1px solid #8a7b40;
+}

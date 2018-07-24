@@ -49,7 +49,7 @@
 }
 
 .content {
-    padding: 0 2em;
+    padding: 0 3em;
 }
 
 .broadwise-tabs li {
@@ -110,6 +110,24 @@ h4.option {
 button.option {
     margin-top: 6px;
     margin-right: .6em;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.btn:active {
+    -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+    box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
 }
 
 .panelBtn {
@@ -230,6 +248,10 @@ button.option {
     float: left;
 }
 
+.fr {
+    float: right;
+}
+
 .center {
     text-align: center;
 }
@@ -242,6 +264,30 @@ button.option {
 
 .grey {
     color: #878787;
+}
+
+.bigText {
+    font-size: 18px;
+    color: #8a7b40;
+    padding: 0 2px;
+}
+
+.bigBtn {
+    letter-spacing: 3px;
+    width: 130px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.bigBtn.brown {
+    color: #26200f;
+    background: #c2b069;
+}
+
+.bigBtn.red {
+    color: #fff;
+    background: #bd2c00;
 }
 
 .debug1 {

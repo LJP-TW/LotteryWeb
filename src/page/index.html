@@ -4,6 +4,8 @@
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
         <link href="common.css" rel="stylesheet" type="text/css">
         <link href="main.css" rel="stylesheet" type="text/css">
+        <link href="bet-form.css" rel="stylesheet" type="text/css">
+        <link href="bet-verify.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <div class="header">
@@ -236,9 +238,91 @@
                                         </tr>
                                     </table>
                                 </div>
-                                <div class="row-block bet-option">
+                                <div class="row-block">
+                                    <table class="bet-form">
+                                        <tr>
+                                            <td>
+                                                <p class="p">已選擇了<span class="bigText">0</span>注，共<span class="bigText">¥0</span>元。</p>
+                                            </td>
+                                            <td width="160px">
+                                                <div class="select">
+                                                    <span class="select-counter-action">－
+                                                    </span><div class="choose-model">
+                                                        <input class="choose-input" value="1">
+                                                        </input>
+                                                    </div><span class="select-counter-action">+
+                                                    </span>
+                                                    倍
+                                                </div>
+                                            </td>
+                                            <td width="170px" class="unit">
+                                                <ul>
+                                                    <li>
+                                                    2元
+                                                    </li>
+                                                    <li>
+                                                    2角
+                                                    </li>
+                                                    <li>
+                                                    2分
+                                                    </li>
+                                                    <li>
+                                                    2厘
+                                                    </li>
+                                                    <li>
+                                                    1元
+                                                    </li>
+                                                    <li>
+                                                    1角
+                                                    </li>
+                                                    <li>
+                                                    1分
+                                                    </li>
+                                                    <li>
+                                                    1厘
+                                                    </li>
+                                                </ul>
+                                            </td>
+                                            <td width="270px">
+                                                <button class="btn bigBtn brown">選好了</button>
+                                                <button class="btn bigBtn red">一鍵投注</button>
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </div>
-                                <div class="row-block bet-verify">
+                                <div class="row-block bet-verify clearfix">
+                                    <div class="fl bet-verify-left">
+                                        <div class="mb clearfix">
+                                            <span class="lig_green fl">
+                                                投注項：0筆。
+                                            </span>
+                                            <span class="fr">
+                                                <img width="18px" height="18px" src="garbage.png">
+                                                </img>
+                                            </span>
+                                        </div>
+                                        <div class="bet-table">
+                                            <table>
+                                                <tr>
+                                                    <th width="25%">玩法</th>
+                                                    <th width="28%">號碼</th>
+                                                    <th width="14%">組數</th>
+                                                    <th width="10%">倍</th>
+                                                    <th width="17%">金額</th>
+                                                    <th width="6%"></th>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="fl bet-verify-right">
+                                        <p>總投注數：<span class="bigText">0</span>注。</p>
+                                        <p>總金額：<span class="bigText">¥0</span>  元。</p>                                     
+                                        <div class="plus">
+                                            <i></i>
+                                            <span>我要追注</span>
+                                        </div>
+                                        <button class="btn bigBtn red">確認投注</button>
+                                    </div>
                                 </div>
                                 <div class="row-block bet-history">
                                 </div>

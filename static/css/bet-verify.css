@@ -1,0 +1,70 @@
+.bet-verify {
+    background: #fbf9f4;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.bet-verify-left {
+    box-sizing: border-box;
+    overflow-y: auto;
+    width: 62%;
+    padding: .7em .7em;
+}
+
+.bet-verify-right {
+    box-sizing: border-box;
+    padding: 9px 17px;
+    width: 38%;
+    padding: .7em .7em;
+    letter-spacing: .5px;
+    line-height: 34px;
+    color: #878787;
+    text-align: center;
+}
+
+.lig_green {
+    color: #8a7b40;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.mb {
+    margin-bottom: 4px;
+}
+
+.bet-table {
+    height: 158px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.bet-table table {
+    width: 100%;
+    max-width: 100%;
+}
+
+.bet-table table tr th {
+    text-align: center;
+    background-color: #8a7b40;
+    border: 1px solid #fbf9f4;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.plus {
+    color: #8a7b40;
+    font-size: 14px;
+    cursor: pointer;
+    width: 91px;
+    margin: 0 auto;
+}
+
+.plus i {
+    background: url(person-icon.png) 0 0 no-repeat;
+    display: inline-block;
+    vertical-align: middle;
+    width: 23px;
+    height: 23px;
+    margin-right: 5px;
+}
