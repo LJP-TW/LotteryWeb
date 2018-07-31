@@ -60,6 +60,11 @@
     padding: 5px;
 }
 
+.bet-table table tr td {
+    color: #878787;
+    text-align: center;
+}
+
 .plus {
     color: #8a7b40;
     font-size: 14px;

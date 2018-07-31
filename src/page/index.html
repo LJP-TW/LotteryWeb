@@ -2,11 +2,11 @@
     <head>
         <meta charset="utf-8">
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <link href="common.css" rel="stylesheet" type="text/css">
-        <link href="main.css" rel="stylesheet" type="text/css">
-        <link href="bet-form.css" rel="stylesheet" type="text/css">
-        <link href="bet-verify.css" rel="stylesheet" type="text/css">
-        <link href="bet-history.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="common.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="bet-form.css">
+        <link rel="stylesheet" type="text/css" href="bet-verify.css">
+        <link rel="stylesheet" type="text/css" href="bet-history.css">
     </head>
     <body>
         <div class="header">
@@ -161,7 +161,7 @@
                                             </td>
                                         </tr>
                                         <!-- 萬位選號 --> 
-                                       <tr v-if="mode == 'n'">
+                                       <tr v-if="mode === 'n1' || mode === 'n5'">
                                             <td>
                                                 <div class="vcenter">
                                                     <p>萬　位</p>
@@ -177,7 +177,7 @@
                                             </td>
                                         </tr>
                                         <!-- 千位選號 --> 
-                                        <tr v-if="mode === 'n'">
+                                        <tr v-if="mode === 'n1' || mode === 'n5'">
                                             <td>
                                                 <div class="vcenter">
                                                     <p>千　位</p>
@@ -193,7 +193,7 @@
                                             </td>
                                         </tr>
                                         <!-- 百位選號 --> 
-                                        <tr v-if="mode === 'n'">
+                                        <tr v-if="mode === 'n1' || mode === 'n5'">
                                             <td>
                                                 <div class="vcenter">
                                                     <p>百　位</p>
@@ -209,7 +209,7 @@
                                             </td>
                                         </tr>
                                         <!-- 十位選號 --> 
-                                        <tr v-if="mode === 'n'">
+                                        <tr v-if="mode === 'n1' || mode === 'n5'">
                                             <td>
                                                 <div class="vcenter">
                                                     <p>十　位</p>
@@ -225,7 +225,7 @@
                                             </td>
                                         </tr>
                                         <!-- 個位選號 --> 
-                                        <tr v-if="mode === 'n'">
+                                        <tr v-if="mode === 'n1' || mode === 'n5'">
                                             <td>
                                                 <div class="vcenter">
                                                     <p>個　位</p>
@@ -242,65 +242,65 @@
                                         </tr>
                                     </table>
                                 </div>
-                                <div class="row-block">
+                                <div id="betTable" class="row-block">
                                     <table class="bet-form">
                                         <tr>
                                             <td>
-                                                <p class="p">已選擇了<span class="bigText">0</span>注，共<span class="bigText">¥0</span>元。</p>
+                                                <p class="p">已選擇了<span class="bigText">{{ tickets }}</span>注，共<span class="bigText">¥{{ (tickets * odds * (unit * 1000)) / 1000 }}</span>元。</p>
                                             </td>
                                             <td width="160px">
                                                 <div class="select">
-                                                    <span class="select-counter-action">－
+                                                    <span class="select-counter-action" @click="oddsDecrease()">－
                                                     </span><div class="choose-model">
-                                                        <input class="choose-input" value="1">
+                                                        <input class="choose-input" v-model="odds">
                                                         </input>
-                                                    </div><span class="select-counter-action">+
+                                                    </div><span class="select-counter-action" @click="oddsIncrease()">+
                                                     </span>
                                                     倍
                                                 </div>
                                             </td>
                                             <td width="170px" class="unit">
                                                 <ul>
-                                                    <li>
+                                                    <li @click="unit = 2" :class="{active: unit === 2}">
                                                     2元
                                                     </li>
-                                                    <li>
+                                                    <li @click="unit = 0.2" :class="{active: unit === 0.2}">
                                                     2角
                                                     </li>
-                                                    <li>
+                                                    <li @click="unit = 0.02" :class="{active: unit === 0.02}">
                                                     2分
                                                     </li>
-                                                    <li>
+                                                    <li @click="unit = 0.002" :class="{active: unit === 0.002}">
                                                     2厘
                                                     </li>
-                                                    <li>
+                                                    <li @click="unit = 1" :class="{active: unit === 1}">
                                                     1元
                                                     </li>
-                                                    <li>
+                                                    <li @click="unit = 0.1" :class="{active: unit === 0.1}">
                                                     1角
                                                     </li>
-                                                    <li>
+                                                    <li @click="unit = 0.01" :class="{active: unit === 0.01}">
                                                     1分
                                                     </li>
-                                                    <li>
+                                                    <li @click="unit = 0.001" :class="{active: unit === 0.001}">
                                                     1厘
                                                     </li>
                                                 </ul>
                                             </td>
                                             <td width="270px">
-                                                <button class="btn bigBtn brown">選好了</button>
+                                                <button class="btn bigBtn brown" @click="done()">選好了</button>
                                                 <button class="btn bigBtn red">一鍵投注</button>
                                             </td>
                                         </tr>
                                     </table>
                                 </div>
-                                <div class="row-block bet-verify clearfix">
+                                <div id="betVerify" class="row-block bet-verify clearfix">
                                     <div class="fl bet-verify-left">
                                         <div class="mb clearfix">
                                             <span class="lig_green fl">
-                                                投注項：0筆。
+                                                投注項：{{ totalTurnover }}筆。
                                             </span>
-                                            <i class="fr"></i>
+                                            <i class="fr" @click="clear()"></i>
                                         </div>
                                         <div class="bet-table">
                                             <table>
@@ -312,20 +312,28 @@
                                                     <th width="17%">金額</th>
                                                     <th width="6%"></th>
                                                 </tr>
+                                                <tr class="" v-for="data in turnover">
+                                                    <td>{{ data.modeText }}</td>
+                                                    <td>{{ data.numStr }}</td>
+                                                    <td>{{ data.grpAmount }}</td>
+                                                    <td>{{ data.odds }}</td>
+                                                    <td>{{ data.money }}</td>
+                                                    <td @click="deleteElement(data.id)">X</td>
+                                                </tr>
                                             </table>
                                         </div>
                                     </div>
                                     <div class="fl bet-verify-right">
-                                        <p>總投注數：<span class="bigText">0</span>注。</p>
-                                        <p>總金額：<span class="bigText">¥0</span>  元。</p>                                     
+                                        <p>總投注數：<span class="bigText">{{ totalTickets }}</span>注。</p>
+                                        <p>總金額：<span class="bigText">¥{{ totalMoney }}</span>  元。</p>                                     
                                         <div class="plus">
                                             <i></i>
                                             <span>我要追注</span>
                                         </div>
-                                        <button class="btn bigBtn red">確認投注</button>
+                                        <button class="btn bigBtn red" @click="verify()">確認投注</button>
                                     </div>
                                 </div>
-                                <div class="row-block bet-history">
+                                <div id="betHistory" class="row-block bet-history">
                                     <div class="row-block tabs-bg1">
                                         <ul class="broadwise-tabs style2">
                                             <li>我的投注</li>
